@@ -19,7 +19,6 @@ public class ContactTracerTest {
     @Test
     public void testDupes() {
         ContactTracer tracer = new ContactTracer();
-        // we start at 100 here, but really its arbitrary.. only the relative time differences matter.
         tracer.addTrace(new Trace("Anna", "Sanni", 100));
         tracer.addTrace(new Trace("Anna", "Sanni", 100));
         tracer.addTrace(new Trace("Anna", "Sanni", 100));
@@ -42,7 +41,6 @@ public class ContactTracerTest {
     @Test
     public void testNullConstructor() {
         ContactTracer tracer = new ContactTracer();
-        // we start at 100 here, but really its arbitrary.. only the relative time differences matter.
         tracer.addTrace(null);
 
         assertEquals(Set.of(), tracer.getContacts("Anna"));
@@ -54,7 +52,6 @@ public class ContactTracerTest {
     @Test
     public void testInterspersedNulls() {
         ContactTracer tracer = new ContactTracer();
-        // we start at 100 here, but really its arbitrary.. only the relative time differences matter.
         tracer.addTrace(null);
         tracer.addTrace(new Trace("Anna", "Sanni", 100));
         tracer.addTrace(new Trace("Anna", "Matt", 1740));
@@ -78,7 +75,6 @@ public class ContactTracerTest {
     @Test
     public void testNullParams() {
         ContactTracer tracer = new ContactTracer();
-        // we start at 100 here, but really its arbitrary.. only the relative time differences matter.
         tracer.addTrace(new Trace("Anna", "Sanni", 100));
         tracer.addTrace(new Trace("Anna", "Matt", 1740));
         tracer.addTrace(new Trace("Matt", "Kristian", 3240));
@@ -96,7 +92,6 @@ public class ContactTracerTest {
     @Test
     public void testMeetingSelf() {
         ContactTracer tracer = new ContactTracer();
-        // we start at 100 here, but really its arbitrary.. only the relative time differences matter.
         tracer.addTrace(new Trace("Anna", "Anna", 100));
         tracer.addTrace(new Trace("Anna", "Anna", 9999));
         tracer.addTrace(new Trace("Anna", "Sanni", 100));
@@ -116,7 +111,6 @@ public class ContactTracerTest {
     @Test
     public void testNegativeParams() {
         ContactTracer tracer = new ContactTracer();
-        // we start at 100 here, but really its arbitrary.. only the relative time differences matter.
         tracer.addTrace(new Trace("Anna", "Sanni", 100));
         tracer.addTrace(new Trace("Anna", "Matt", -999));
         tracer.addTrace(new Trace("Matt", "Kristian", -999));
@@ -132,7 +126,6 @@ public class ContactTracerTest {
     @Test
     public void testOrderingTime() {
         ContactTracer tracer = new ContactTracer();
-        // we start at 100 here, but really its arbitrary.. only the relative time differences matter.
         tracer.addTrace(new Trace("A", "B", 5));
         tracer.addTrace(new Trace("A", "B", 1));
         tracer.addTrace(new Trace("A", "B", 9));
@@ -141,7 +134,6 @@ public class ContactTracerTest {
     @Test
     public void testSpecExample() {
         ContactTracer tracer = new ContactTracer();
-        // we start at 100 here, but really its arbitrary.. only the relative time differences matter.
         tracer.addTrace(new Trace("Anna", "Sanni", 100));
         tracer.addTrace(new Trace("Anna", "Matt", 1740));
         tracer.addTrace(new Trace("Matt", "Kristian", 3240));
@@ -190,7 +182,6 @@ public class ContactTracerTest {
     @Test
     public void myTracerTestAnna() {
         ContactTracer tracer = new ContactTracer();
-        // we start at 100 here, but really its arbitrary.. only the relative time differences matter.
         tracer.addTrace(new Trace("Anna", "Sanni", 100));
         tracer.addTrace(new Trace("Anna", "Matt", 1740));
         tracer.addTrace(new Trace("Matt", "Kristian", 3240));
@@ -209,7 +200,6 @@ public class ContactTracerTest {
     @Test
     public void myTracerTestJim() {
         ContactTracer tracer = new ContactTracer();
-        // we start at 100 here, but really its arbitrary.. only the relative time differences matter.
         tracer.addTrace(new Trace("Anna", "Sanni", 100));
         tracer.addTrace(new Trace("Anna", "Matt", 1740));
         tracer.addTrace(new Trace("Matt", "Kristian", 3240));
@@ -228,7 +218,6 @@ public class ContactTracerTest {
     @Test
     public void myTracerTestLateInfection() {
         ContactTracer tracer = new ContactTracer();
-        // we start at 100 here, but really its arbitrary.. only the relative time differences matter.
         tracer.addTrace(new Trace("Anna", "Sanni", 100));
         tracer.addTrace(new Trace("Anna", "Matt", 1740));
         tracer.addTrace(new Trace("Matt", "Kristian", 3240));
@@ -247,7 +236,6 @@ public class ContactTracerTest {
     @Test
     public void myTracerTestAllInfected() {
         ContactTracer tracer = new ContactTracer();
-        // we start at 100 here, but really its arbitrary.. only the relative time differences matter.
         tracer.addTrace(new Trace("Anna", "Sanni", 100));
         tracer.addTrace(new Trace("Anna", "Matt", 1740));
         tracer.addTrace(new Trace("Matt", "Kristian", 3240));
@@ -266,7 +254,6 @@ public class ContactTracerTest {
     @Test
     public void myTracerTestDisconnected() {
         ContactTracer tracer = new ContactTracer();
-        // we start at 100 here, but really its arbitrary.. only the relative time differences matter.
         tracer.addTrace(new Trace("A", "B", 0));
         tracer.addTrace(new Trace("B", "C", 100));
         tracer.addTrace(new Trace("B", "D", 200));
@@ -286,7 +273,6 @@ public class ContactTracerTest {
     @Test
     public void testGetContacts() {
         ContactTracer tracer = new ContactTracer();
-        // we start at 100 here, but really its arbitrary.. only the relative time differences matter.
         tracer.addTrace(new Trace("Anna", "Sanni", 100));
         tracer.addTrace(new Trace("Anna", "Matt", 1740));
         tracer.addTrace(new Trace("Matt", "Kristian", 3240));
@@ -330,7 +316,6 @@ public class ContactTracerTest {
     @Test
     public void testGetContactTimes() {
         ContactTracer tracer = new ContactTracer();
-        // we start at 100 here, but really its arbitrary.. only the relative time differences matter.
         tracer.addTrace(new Trace("Anna", "Sanni", 100));
         tracer.addTrace(new Trace("Anna", "Matt", 1740));
         tracer.addTrace(new Trace("Matt", "Kristian", 3240));
@@ -384,7 +369,6 @@ public class ContactTracerTest {
     @Test
     public void testGetContactsAfter() {
         ContactTracer tracer = new ContactTracer();
-        // we start at 100 here, but really its arbitrary.. only the relative time differences matter.
         tracer.addTrace(new Trace("Anna", "Sanni", 100));
         tracer.addTrace(new Trace("Anna", "Matt", 1740));
         tracer.addTrace(new Trace("Matt", "Kristian", 3240));
